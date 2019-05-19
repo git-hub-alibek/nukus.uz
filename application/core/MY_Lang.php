@@ -15,7 +15,7 @@ class MY_Lang extends CI_Lang {
 		'en' => 'english',
 		'ru' => 'russian',		
 		'uz' => 'uzbek',
-		'kr' => 'karakalpak',
+		'kk' => 'karakalpak',
 		
 	);
 	
