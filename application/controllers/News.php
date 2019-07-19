@@ -7,8 +7,9 @@ class News extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('text');
-		$data['news'] = $this->db->limit(20)->order_by('id', 'DESC')->get('news')->result();
-		$this->view_lib->render('news/list', $data);
+		//$data['info']=$this->db->where('id',$id)->get('news')->row_array();
+		$data['news'] = $this->db->limit(5)->order_by('id', 'DESC')->get('news')->result();
+		$this->load->view('/news/list', $data);
 	}
 	public function show($id)
 	{

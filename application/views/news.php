@@ -107,17 +107,7 @@
 
 	</div>
 
-				<!-- Menu Social -->
 				
-				<div class="menu_social_container menu_mm">
-					<ul class="menu_social menu_mm">
-						<li class="menu_social_item menu_mm"><a href="/assets/#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="/assets/#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="/assets/#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="/assets/#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="/assets/#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
 
 				<div class="menu_copyright menu_mm"><?php echo lang('prava');?></div>
 			</div>
@@ -173,50 +163,19 @@
 						<div class="news_post">
 							<div class="post_title"><a href="/assets/#">Top destinations in Europe</a></div>
 							<div class="post_meta">
-								<ul>
-									<li><a href="/assets/#">by admin</a></li>
-									<li>january 31, 2018</li>
-									
-								</ul>
+								
 							</div>
 							<div class="post_image">
 								<img src="/assets/images/news_1.jpg" alt="https://unsplash.com/@simonmigaj">
-								<a href="/assets/#"><div class="post_image_box text-center">+</div></a>
 							</div>
 							<div class="post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+								<p></p>
 							</div>
 						</div>
 
+						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="/assets/#">Tips & tricks to have a perfect vacation</a></div>
-							<div class="post_meta">
-								<ul>
-									<li><a href="/assets/#">by admin</a></li>
-									<li>january 31, 2018</li>
-									<li><a href="/assets/#">3 comments</a></li>
-								</ul>
-							</div>
-							<div class="post_image">
-								<img src="/assets/images/news_2.jpg" alt="https://unsplash.com/@mfggomez">
-								<a href="/assets/#"><div class="post_image_box text-center">+</div></a>
-							</div>
-							<div class="post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
-							</div>
-						</div>
-
-						<!-- News Post -->
-						<div class="news_post">
-							<div class="post_title"><a href="/assets/#">Top destinations in Europe</a></div>
-							<div class="post_meta">
-								<ul>
-									<li><a href="/assets/#">by admin</a></li>
-									<li>january 31, 2018</li>
-									<li><a href="/assets/#">3 comments</a></li>
-								</ul>
-							</div>
 							<div class="post_image">
 								<img src="/assets/images/news_3.jpg" alt="https://unsplash.com/@claudiotrigueros">
 								<a href="/assets/#"><div class="post_image_box text-center">+</div></a>
@@ -280,40 +239,12 @@
 
 						</div>
 
-						<!-- Offers -->
-						<div class="sidebar_offers">
-
-							<!-- Offer -->
-							<div class="sidebar_offer">
-								<div class="sidebar_offer_background" style="background-image:url(images/offer_1.jpg)"></div>
-								<div class="sidebar_offer_content">
-									<div class="sidebar_offer_destination">bali</div>
-									<div class="sidebar_offer_percent">38%</div>
-									<div class="sidebar_offer_title">Last Minute Offer</div>
-									<div class="sidebar_offer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris.</div>
-									<div class="sidebar_offer_button"><a href="/assets/offers.html">See Offer</a></div>
-								</div>
-							</div>
-
-							<!-- Offer -->
-							<div class="sidebar_offer">
-								<div class="sidebar_offer_background" style="background-image:url(images/offer_2.jpg)"></div>
-								<div class="sidebar_offer_content">
-									<div class="sidebar_offer_destination">bali</div>
-									<div class="sidebar_offer_percent">25%</div>
-									<div class="sidebar_offer_title">Last Minute Offer</div>
-									<div class="sidebar_offer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris.</div>
-									<div class="sidebar_offer_button"><a href="/assets/offers.html">See Offer</a></div>
-								</div>
-							</div>
+						
 
 						</div>
 
 						<!-- Sidebar Quote -->
-						<div class="sidebar_quote">
-							<div class="quote_box"><img src="/assets/images/quote.png" alt=""></div>
-							<div class="quote_text"><span>“Traveling</span> – it leaves you speechless, then turns you into a storyteller.”</div>
-						</div>
+						
 					</div>
 				</div>
 
