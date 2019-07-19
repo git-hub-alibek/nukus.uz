@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Nukus</title>
+<title><?php echo lang('nukus');?></title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
@@ -110,8 +110,8 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>Nukus</div>
-								<div>Uzbekistan</div>
+								<div><?php echo lang('nukus');?></div>
+								<div><?php echo lang('uzbekistan');?></div>
 								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
 							</div>
 						</div>
@@ -119,18 +119,18 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="<?php echo site_url('homepage');?>"><?php echo lang('menu_home');?></a></li>
+								<li class="main_nav_item active"><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
-								<li class="main_nav_item"><a href="<?php echo site_url('sign-in');?>"><?php echo lang('menu_sign-in');?></a></li>
+								
 								
 							
 								
 								
 								<div class="dropdown main_nav_item">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Language
+    <?php echo lang('lang');?>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		<a class="dropdown-item"><?php echo anchor($this->lang->switch_uri('en'), ' <img width="30"  src="/assets/images/eng-flag.png">English' ) ;?></a>
@@ -145,7 +145,13 @@
 							</ul>
 						</nav>
 
-						
+						<!-- Search -->
+						<div class="search">
+							<form action="#" class="search_form">
+								
+								<button type="submit" class="search_button ml-auto ctrl_class"><img src="/assets/images/search.png" width="30" alt=""></button>
+							</form>
+						</div>
 
 						<!-- Hamburger -->
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -175,26 +181,15 @@
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="#">Homepage</a></li>
-					<li class="menu_item menu_mm"><a href="#">About Us</a></li>
-					<li class="menu_item menu_mm"><a href="#">Gallery</a></li>
-					<!--<li class="menu_item menu_mm"><a href="news.html">News</a></li>-->
-					<li class="menu_item menu_mm"><a href="#">Contact</a></li>
+				<li class="main_nav_item active"><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+								
+								
 				</ul>
 
-				<!-- Menu Social -->
 				
-				<div class="menu_social_container menu_mm">
-					<ul class="menu_social menu_mm">
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-
-				<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
 			</div>
 
 		</div>
@@ -207,8 +202,8 @@
 		<div class="home_background" style="background-image:url(/assets/images/home.jpg)"></div>
 		<div class="home_content">
 			<div class="home_content_inner">
-				<div class="home_text_large">Nukus</div>
-				<div class="home_text_small">Republic of Karakalpakstan</div>
+				<div class="home_text_large"><?php echo lang('nukus');?></div>
+				<div class="home_text_small"><?php echo lang('qara');?></div>
 			</div>
 		</div>
 	</div>
@@ -222,8 +217,8 @@
 		<!-- Image by https://unsplash.com/@peecho -->
 		<div class="video_background parallax-window" data-parallax="scroll" data-image-src="/assets/images/video.jpg" data-speed="0.8"></div>
 		<div class="video_content">
-			<div class="video_title">1 day in Nukus</div>
-			<div class="video_subtitle">Video made with ....</div>
+			<div class="video_title"><?php echo lang('one_day');?></div>
+			<div class="video_subtitle"></div>
 			<div class="video_play">
 				<a  class="video" href="/assets/images/videoplayback.mp4">
 					<svg version="1.1" id="Layer_1" class="play_button" xmlns="/assets/images/videoplayback.mp4" xmlns:xlink="/assets/images/videoplayback.mp4" x="0px" y="0px"
@@ -245,8 +240,8 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h2>Beautiful places in Nukus</h2>
-						<div>Come to us and see for yourself</div>
+						<h2><?php echo lang('beautiful'); ?></h2>
+						<div><?php echo lang('see'); ?></div>
 					</div>
 				</div>
 			</div>
@@ -355,8 +350,8 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h2>Popular place in Nukus</h2>
-						<div>Come to us and see for yourself</div>
+						<h2><?php echo lang('popular');?></h2>
+						<div><?php echo lang('see');?></div>
 					</div>
 				</div>
 			</div>
@@ -446,14 +441,14 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>Nukus</div>
-								<div>Uzbekistan</div>
+							<div><?php echo lang('nukus');?></div>
+								<div><?php echo lang('uzbekistan');?></div>
 								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
 							</div>
 						</div>
 						<div class="footer_about_text"></div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="http://alibek.uz" target="_blank">Web Developer</a>
+ &copy;<script>document.write(new Date().getFullYear());</script> <?php echo lang('prava');?> <a href="http://alibek.uz" target="_blank">Web Developer</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>

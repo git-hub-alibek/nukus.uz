@@ -14,7 +14,7 @@ class View_lib{
         if (!isset($data['title'])) $data['title'] = $CI->config->item('default_title');
         $data['content'] = $page;
         $data['data'] = $data;
-        $CI->load->view('layout_homepage',$data);
+        $CI->load->view('news',$data);
     }
     
     function render($page,$data = '')
@@ -24,7 +24,7 @@ class View_lib{
         if (!isset($data['title'])) $data['title'] = $CI->config->item('default_title');
         $data['content'] = $page;
         $data['data'] = $data;
-        $CI->load->view('layout',$data);
+        $CI->load->view('news',$data);
     }
     
 }

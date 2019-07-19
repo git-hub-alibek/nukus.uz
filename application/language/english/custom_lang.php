@@ -21,5 +21,35 @@ $lang['menu_uzb'] = 'Uzbek';
 $lang['menu_rus'] = 'Russian';
 $lang['menu_kk'] = 'Karakalpak';
 $lang['menu_eng'] = 'English';
+$lang['nukus'] = 'Nukus';
+$lang['uzbekistan'] = 'Uzbekistan';
+$lang['lang'] = 'Language';
+$lang['prava'] = 'All rights reserved';
+$lang['qara'] = 'Karakalpakstan';
+$lang['one_day'] = 'One day in Karakalpakstan ...';
+$lang['beautiful'] = 'Beautiful places in Nukus';
+$lang['see'] = 'COME TO US AND SEE FOR YOURSELF';
+$lang['popular'] = 'Popular places  in Nukus';
+$lang['getin'] = 'Get In Touch';
+$lang['adress'] = '230105, Nukus city , street A.Dosnazarov № 96';
+$lang['phone'] = ' 0 (361) 222-25-39';
+
+$lang['name'] = 'Name';
+$lang['news'] = 'News';
+$lang['email1'] = 'Email';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

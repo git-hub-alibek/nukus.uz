@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About us</title>
+<title><?php echo lang('menu_about_us');?></title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
@@ -26,8 +26,8 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>Nukus</div>
-								<div>Uzbekistan</div>
+							<div><?php echo lang('nukus');?></div>
+								<div><?php echo lang('uzbekistan');?></div>
 								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
 							</div>
 						</div>
@@ -35,30 +35,34 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item "><a href="/">Homepage</a></li>
-								<li class="main_nav_item active"><a href="about">About Us</a></li>
-								<li class="main_nav_item"><a href="#">News</a></li>
-							
-								<!--<li class="main_nav_item"><a href="#">News</a></li> -->
-								<li class="main_nav_item"><a href="#">Contact</a></li>
-								<li class="main_nav_item"><a href="#">Sign-in</a></li>
+							<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
+								<li class="main_nav_item active"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
+								
 								
 								<div class="dropdown main_nav_item">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Language
+  <?php echo lang('lang');?>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#"><img width="30" src="//assets/images/eng-flag.png">English</a>
-    <a class="dropdown-item" href="#"><img width="30" src="//assets/images/ru-flag.png">Russian</a>
-    <a class="dropdown-item" href="#"><img width="30" src="//assets/images/uz-flag.png">Uzbek</a>
-    <a class="dropdown-item" href="#"><img width="30" src="//assets/images/kr-flag.png">Karakalpak</a>
+  <a class="dropdown-item"><?php echo anchor($this->lang->switch_uri('en'), ' <img width="30"  src="/assets/images/eng-flag.png">English' ) ;?></a>
+		<a class="dropdown-item"><?php echo anchor($this->lang->switch_uri('ru'), ' <img width="30"  src="/assets/images/ru-flag.png">Русский' ) ;?></a>
+		<a class="dropdown-item"><?php echo anchor($this->lang->switch_uri('uz'), ' <img width="30"  src="/assets/images/uz-flag.png">Өзбек' ) ;?></a>
+		<a class="dropdown-item"><?php echo anchor($this->lang->switch_uri('kk'), ' <img width="30"  src="/assets/images/kr-flag.png">Қарақалпақ' ) ;?></a>
   </div>
 </div>
 
 
 							</ul>
 						</nav>
-
+<!-- Search -->
+<div class="search">
+							<form action="#" class="search_form">
+								
+								<button type="submit" class="search_button ml-auto ctrl_class"><img src="/assets/images/search.png" width="30" alt=""></button>
+							</form>
+						</div>
 						<!-- Hamburger -->
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
@@ -87,11 +91,10 @@
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="/">Home</a></li>
-					<li class="menu_item menu_mm"><a href="about">About us</a></li>
-					<li class="menu_item menu_mm"><a href="">Offers</a></li>
-					<li class="menu_item menu_mm"><a href="">News</a></li>
-					<li class="menu_item menu_mm"><a href="">Contact</a></li>
+				<li class="main_nav_item active"><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 				</ul>
 
 				<!-- Menu Social -->
@@ -123,11 +126,11 @@
 				<div class="col">
 					<div class="home_content">
 						<div class="home_content_inner">
-							<div class="home_title">About us</div>
+							<div class="home_title"><?php echo lang('menu_about_us');?></div>
 							<div class="home_breadcrumbs">
 								<ul class="home_breadcrumbs_list">
-									<li class="home_breadcrumb"><a href="/">Home</a></li>
-									<li class="home_breadcrumb">About us</li>
+									<li class="home_breadcrumb"><a href="/"><?php echo lang('menu_home');?></a></li>
+									<li class="home_breadcrumb"><?php echo lang('menu_about_us');?></li>
 								</ul>
 							</div>
 						</div>
@@ -145,7 +148,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h2>About Us</h2>
+						<h2><?php echo lang('menu_about_us');?></h2>
 						<div></div>
 					</div>
 				</div>
@@ -179,14 +182,14 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>Nukus</div>
-								<div>Uzbekistan</div>
+							<div><?php echo lang('nukus');?></div>
+								<div><?php echo lang('uzbekistan');?></div>
 								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
 							</div>
 						</div>
 						<div class="footer_about_text"></div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="http://alibek.uz" target="_blank">Web Developer</a>
+ &copy;<script>document.write(new Date().getFullYear());</script> <?php echo lang('prava');?> <a href="http://alibek.uz" target="_blank">Web Developer</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>
