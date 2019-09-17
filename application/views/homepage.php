@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <title><?php echo lang('nukus');?></title>
+<link rel="icon" href="/assets/images/logo.png">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
@@ -111,7 +112,7 @@
 						<div class="logo_container">
 							<div class="logo">
 								<div><?php echo lang('nukus');?></div>
-								<div><?php echo lang('uzbekistan');?></div>
+								<!-- <div><?php echo lang('uzbekistan');?></div> -->
 								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
 							</div>
 						</div>
@@ -121,6 +122,7 @@
 							<ul class="main_nav_list">
 								<li class="main_nav_item active"><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('investicion');?>"><?php echo lang('menu_investicion');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								
@@ -203,7 +205,7 @@
 		<div class="home_content">
 			<div class="home_content_inner">
 				<div class="home_text_large"><?php echo lang('nukus');?></div>
-				<div class="home_text_small"><?php echo lang('qara');?></div>
+				<!-- <div class="home_text_small"><?php echo lang('qara');?></div> -->
 			</div>
 		</div>
 	</div>
@@ -440,15 +442,16 @@
 					<div class="footer_about">
 						<!-- Logo -->
 						<div class="logo_container">
-							<div class="logo">
-							<div><?php echo lang('nukus');?></div>
-								<div><?php echo lang('uzbekistan');?></div>
-								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
+							<div class="logo"> 
+							<div>&nbsp;&nbsp;&nbsp;<?php echo lang('nukus');?></div>
+								<!-- <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo lang('uzbekistan');?></div> -->
+								
+								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div> 
 							</div>
 						</div>
 						<div class="footer_about_text"></div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- &copy;<script>document.write(new Date().getFullYear());</script> <?php echo lang('prava');?> <a href="http://alibek.uz" target="_blank">Web Developer</a>
+ &copy;<script>document.write(new Date().getFullYear());</script> <?php echo lang('prava');?> Web Developer
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>

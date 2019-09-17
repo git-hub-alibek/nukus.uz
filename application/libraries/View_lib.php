@@ -7,24 +7,23 @@ class View_lib{
         
     }
     
-    function render_homepage($page,$data = '')
+    
+    function render_investicion($page,$data = '')
     {
-        $CI =&get_instance();
+		$CI =&get_instance();
         $data = (array)$data;
         if (!isset($data['title'])) $data['title'] = $CI->config->item('default_title');
         $data['content'] = $page;
         $data['data'] = $data;
-        $CI->load->view('news',$data);
+        $CI->load->view('/investicion/show',$data);
     }
-    
-    function render($page,$data = '')
+    function render_news($page,$data = '')
     {
-        $CI =&get_instance();
+		$CI =&get_instance();
         $data = (array)$data;
         if (!isset($data['title'])) $data['title'] = $CI->config->item('default_title');
         $data['content'] = $page;
         $data['data'] = $data;
-        $CI->load->view('news',$data);
+        $CI->load->view('/news/show',$data);
     }
-    
 }

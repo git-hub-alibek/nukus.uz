@@ -5,9 +5,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // menu
 
-
+$lang['admin_panel'] = 'Admin Panel';
 $lang['menu_home'] = 'Homepage';
 $lang['menu_about_us'] = 'About Us';
+$lang['menu_about_us2'] = 'About Government';
+$lang['menu_investicion'] = 'Investicion';
 $lang['menu_services'] = 'Services';
 $lang['menu_help'] = 'Help';
 $lang['menu_news'] = 'News';
@@ -32,11 +34,16 @@ $lang['see'] = 'COME TO US AND SEE FOR YOURSELF';
 $lang['popular'] = 'Popular places  in Nukus';
 $lang['getin'] = 'Get In Touch';
 $lang['adress'] = '230105, Nukus city , street A.Dosnazarov № 96';
-$lang['phone'] = ' 0 (361) 222-25-39';
+$lang['phone'] = ' 0 (361) 222-52-20';
 
 $lang['name'] = 'Name';
 $lang['news'] = 'News';
 $lang['email1'] = 'Email';
+
+$lang['send'] = 'Send';
+$lang['subject'] = 'Subject';
+$lang['message'] = 'Message';
+
 
 
 

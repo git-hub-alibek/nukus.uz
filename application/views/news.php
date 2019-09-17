@@ -37,6 +37,7 @@
 							<ul class="main_nav_list">
 							<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('investicion');?>"><?php echo lang('menu_investicion');?></a></li>
 								<li class="main_nav_item active"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								<div class="dropdown main_nav_item">
@@ -148,10 +149,9 @@
 			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
 		</div>
 		
+<!-- News -->
 
-	<!-- News -->
-
-	<div class="news">
+<div class="news">
 		<div class="container">
 			<div class="row">
 
@@ -161,96 +161,84 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="/assets/#">Top destinations in Europe</a></div>
-							<div class="post_meta">
-								
-							</div>
-							<div class="post_image">
-								<img src="/assets/images/news_1.jpg" alt="https://unsplash.com/@simonmigaj">
-							</div>
-							<div class="post_text">
-								<p></p>
-							</div>
-						</div>
+						<div class="news">
+		<div class="container">
+			<div class="row">
 
+				<!-- News Posts -->
+				<div class="col-lg-9">
+					<div class="news_posts">
 						
 						<!-- News Post -->
 						<div class="news_post">
+							<div class="post_title"><a href="#"><?php echo lang('news');?></a></div>
+							<div class="post_meta">
+								
+							</div>
+							<?php foreach($news as $n):?>
 							<div class="post_image">
-								<img src="/assets/images/news_3.jpg" alt="https://unsplash.com/@claudiotrigueros">
-								<a href="/assets/#"><div class="post_image_box text-center">+</div></a>
+							<img width='700' src="/uploads/<?php echo $n->img;?> "  />
 							</div>
 							<div class="post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+							<?php if($this->uri->segment(1) == 'kk'): ?>
+		        <div><h3><?php echo anchor('news/show/'.$n->id, $n->title_kk);?></h3>
+		        <?php echo word_limiter($n->text_kk, 50);?>
+		<?php endif; ?>
+	    <?php if($this->uri->segment(1) == 'en'): ?>
+		        <div><h3><?php echo anchor('news/show/'.$n->id, $n->title_en);?></h3>
+		        <?php echo word_limiter($n->text_en, 50);?>
+		<?php endif; ?>
+	    <?php if($this->uri->segment(1) == 'ru'): ?>
+		        <div><h3><?php echo anchor('news/show/'.$n->id, $n->title_ru);?></h3>
+		        <?php echo word_limiter($n->text_ru, 50);?>
+		<?php endif; ?>
+	    <?php if($this->uri->segment(1) == 'uz'): ?>
+		        <div><h3><?php echo anchor('news/show/'.$n->id, $n->title_uz);?></h3>
+		        <?php echo word_limiter($n->text_uz, 50);?>
+		<?php endif; ?>
 							</div>
 						</div>
-
+						<?php endforeach;?>
+						
+						
 					</div>
 				</div>
+						</div>
+
+						
 
 				<!-- Sidebar -->
 				<div class="col-lg-3">
 					<div class="sidebar">
-						<div class="sidebar_search">
-							<input type="search" class="sidebar_search_input" placeholder="Search">
-						</div>
+						
 
 						<!-- Featured Posts -->
 						<div class="sidebar_featured">
-
+						
 							<!-- Featured Post -->
-							<div class="sidebar_featured_post">
-								<div class="sidebar_featured_image"><img src="/assets/images/sidebar_featured_1.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="/assets/#">Top destinations in Europe</a></div>
-								<div class="sidebar_featured_meta">
-									<ul>
-										<li><a href="/assets/#">by admin</a></li>
-										<li>january 31, 2018</li>
-										<li><a href="/assets/#">3 comments</a></li>
-									</ul>
-								</div>
+							
+							<?php
+	$this->load->view('news_old');
+	?>
 							</div>
 
-							<!-- Featured Post -->
-							<div class="sidebar_featured_post">
-								<div class="sidebar_featured_image"><img src="/assets/images/sidebar_featured_2.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="/assets/#">Best beaches in the world</a></div>
-								<div class="sidebar_featured_meta">
-									<ul>
-										<li><a href="/assets/#">by admin</a></li>
-										<li>january 31, 2018</li>
-										<li><a href="/assets/#">3 comments</a></li>
-									</ul>
-								</div>
-							</div>
+							
 
-							<!-- Featured Post -->
-							<div class="sidebar_featured_post">
-								<div class="sidebar_featured_image"><img src="/assets/images/sidebar_featured_3.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="/assets/#">Best beaches in the world</a></div>
-								<div class="sidebar_featured_meta">
-									<ul>
-										<li><a href="/assets/#">by admin</a></li>
-										<li>january 31, 2018</li>
-										<li><a href="/assets/#">3 comments</a></li>
-									</ul>
-								</div>
-							</div>
+							
 
 						</div>
+	<!-- News -->
+	
+	
+    
+    </div>
+	
 
-						
 
-						</div>
-
-						<!-- Sidebar Quote -->
-						
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+	
+				
+				
+				
 
 	<!-- Newsletter -->
 
@@ -270,37 +258,7 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-
-				<!-- Footer Column -->
-				<div class="col-lg-12 footer_col">
-					<div class="footer_about">
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo">
-							<div><?php echo lang('nukus');?></div>
-								<div><?php echo lang('uzbekistan');?></div>
-								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
-							</div>
-						</div>
-						<div class="footer_about_text"></div>
-						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- &copy;<script>document.write(new Date().getFullYear());</script> <?php echo lang('prava');?> <a href="http://alibek.uz" target="_blank">Web Developer</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					</div>
-				</div>
-
-				
-
-				
-
-			</div>
-		</div>
-	</footer>
+	<?php $this->load->view('footer');?>
 </div>
 
 <script src="/assets/js/jquery-3.2.1.min.js"></script>

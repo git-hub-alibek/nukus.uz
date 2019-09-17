@@ -27,7 +27,7 @@
 						<div class="logo_container">
 							<div class="logo">
 							<div><?php echo lang('nukus');?></div>
-								<div><?php echo lang('uzbekistan');?></div>
+								<!-- <div><?php echo lang('uzbekistan');?></div> -->
 								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
 							</div>
 						</div>
@@ -37,6 +37,7 @@
 							<ul class="main_nav_list">
 								<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('investicion');?>"><?php echo lang('menu_investicion');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item active"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								
@@ -190,9 +191,9 @@
 						<form action="#" id="contact_form" class="clearfix">
 							<input id="contact_input_name" class="contact_input contact_input_name" type="text" placeholder="<?php echo lang('name');?>" required="required" data-error="Name is required.">
 							<input id="contact_input_email" class="contact_input contact_input_email" type="text" placeholder="<?php echo lang('email1');?>" required="required" data-error="E-mail is required.">
-							<input id="contact_input_subject" class="contact_input contact_input_subject" type="text" placeholder="Subject">
-							<textarea id="contact_input_message" class="contact_message_input contact_input_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-							<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit">Send</button>
+							<input id="contact_input_subject" class="contact_input contact_input_subject" type="text" placeholder="<?php echo lang('subject');?>">
+							<textarea id="contact_input_message" class="contact_message_input contact_input_message" name="message" placeholder="<?php echo lang('message');?>" required="required" data-error="Please, write us a message."></textarea>
+							<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit"><?php echo lang('send');?></button>
 						</form>
 					</div>
 				</div>
@@ -225,10 +226,11 @@
 					<div class="footer_about">
 						<!-- Logo -->
 						<div class="logo_container">
-							<div class="logo">
-							<div><?php echo lang('nukus');?></div>
-								<div><?php echo lang('uzbekistan');?></div>
-								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div>
+							<div class="logo"> 
+							<div>&nbsp;&nbsp;&nbsp;<?php echo lang('nukus');?></div>
+								<!-- <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo lang('uzbekistan');?></div> -->
+								
+								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div> 
 							</div>
 						</div>
 						<div class="footer_about_text"></div>

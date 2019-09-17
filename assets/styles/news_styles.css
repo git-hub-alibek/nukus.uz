@@ -392,7 +392,7 @@ section
 .logo
 {
 	height: 100%;
-	padding-left: 72px;
+	padding-left: 92px;
 }
 .logo div
 {
@@ -403,7 +403,7 @@ section
 {
 	font-size: 24px;
 	font-weight: 500;
-	line-height: 0.75;
+	line-height: 0.5;
 }
 .logo div:nth-child(2)
 {
@@ -417,7 +417,7 @@ section
 .logo_image
 {
 	position: absolute;
-	top: -34px;
+	top: -20px;
 	left: 41px;
 	width: 50px;
 	height: 41px;
@@ -430,7 +430,7 @@ section
 .header.scrolled .logo_image
 {
 	width: 40px;
-	top: -28px;
+	top: -10px;
 	left: 46px;
 }
 .logo_image img
@@ -477,8 +477,8 @@ section
 	font-size: 15px;
 	font-weight: 400;
 	color: #FFFFFF;
-	line-height: 121px;
-	padding-left: 22px;
+	line-height: 40px;
+	padding-left: 12px;
 	padding-right: 22px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1155,6 +1155,7 @@ section
 .post_image
 {
 	margin-top: 28px;
+	margin-left: 30px;
 }
 .post_image img
 {
@@ -1264,10 +1265,12 @@ section
 .sidebar_featured_post
 {
 	margin-bottom: 26px;
+	
 }
 .sidebar_featured_image
 {
 	width: 100%;
+	
 }
 .sidebar_featured_image img
 {
@@ -1276,10 +1279,11 @@ section
 .sidebar_featured_title
 {
 	margin-top: 30px;
+	
 }
 .sidebar_featured_title a
 {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	color: #131a2f;
 	-webkit-transition: all 200ms ease;

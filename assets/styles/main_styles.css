@@ -338,7 +338,7 @@ section
 .logo
 {
 	height: 100%;
-	padding-left: 72px;
+	padding-left: 92px;
 }
 .logo div
 {
@@ -349,7 +349,7 @@ section
 {
 	font-size: 24px;
 	font-weight: 500;
-	line-height: 0.75;
+	line-height: 0.5;
 }
 .logo div:nth-child(2)
 {
@@ -363,7 +363,7 @@ section
 .logo_image
 {
 	position: absolute;
-	top: -34px;
+	top: -20px;
 	left: 41px;
 	width: 50px;
 	height: 41px;
@@ -376,7 +376,7 @@ section
 .header.scrolled .logo_image
 {
 	width: 40px;
-	top: -28px;
+	top: -10px;
 	left: 46px;
 }
 .logo_image img
@@ -401,8 +401,8 @@ section
 {
 	display: inline-block;
 	position: relative;
-	/*padding-left: 22px;
-	padding-right: 22px;*/
+	padding-left: -20px;
+	
 	margin-right: -4px;
 	padding-top: 2px;
 }
@@ -423,8 +423,8 @@ section
 	font-size: 15px;
 	font-weight: 400;
 	color: #FFFFFF;
-	line-height: 121px;
-	padding-left: 22px;
+	line-height: 40px;
+	padding-left: 12px;
 	padding-right: 22px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -653,7 +653,7 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 1000ms 600ms ease;
 	opacity: 0;
-	margin-top: 30px;
+	margin-top: 3220px;
 }
 .menu_container.active .menu_list
 {
@@ -1623,4 +1623,8 @@ section
 .tag:hover
 {
 	background: rgba(254,60,82,0.8);
+}
+.ali {
+	background:rgba(0,0,0,0.7); 
+	box-shadow:0 2px 2px rgba(0,0,0,0.1);
 }

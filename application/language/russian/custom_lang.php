@@ -1,9 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
+$lang['admin_panel'] = 'Админ Панель';
 $lang['menu_home'] = 'Главная страница';
 $lang['menu_about_us'] = 'О нас';
+$lang['menu_about_us2'] = 'Хакимият города Нукуса';
+$lang['menu_investicion'] = 'Инвестиция';
 $lang['menu_services'] = 'Сервисы';
 $lang['menu_help'] = 'Помощь';
 $lang['menu_news'] = 'Новости';
@@ -28,11 +30,14 @@ $lang['see'] = 'ПРИХОДИТЕ К НАМ И ВИДИТЕ САМИ';
 $lang['popular'] = 'Популярные места в Нукусе';
 $lang['getin'] = 'Связаться';
 $lang['adress'] = '230105, город Нукус, ул. A.Досназаров № 96';
-$lang['phone'] = ' 0 (361) 222-25-39';
+$lang['phone'] = ' 0 (361) 222-52-20';
 
 $lang['name'] = 'Имя';
 $lang['email1'] = 'Email';
 $lang['news'] = 'Новости';
+$lang['send'] = 'Отправить';
+$lang['subject'] = 'Тема';
+$lang['message'] = 'Сообщение';
 
 
 

@@ -2,16 +2,27 @@
 
 class Admin extends CI_Controller {
 
+
+
+
 	public function __construct()
 	{
 		parent::__construct();
-
+//if(!$this->ion_auth->logged_in()){
+//			redirect('auth/login');
+//		}
 		$this->load->database();
 		$this->load->helper('url');
 
 		$this->load->library('grocery_CRUD');
 	}
 	public function news(){
+		$crud=new grocery_CRUD();
+		$crud->set_field_upload('img','uploads');
+		$output=$crud->render();
+		$this->_example_output($output);
+	}
+public function investicion(){
 		$crud=new grocery_CRUD();
 		$crud->set_field_upload('img','uploads');
 		$output=$crud->render();
@@ -24,6 +35,7 @@ public function images(){
 		$this->_example_output($output);
 
 	}
+
 
 	public function _example_output($output = null)
 	{

@@ -8,8 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 //
+$lang['admin_panel'] = 'Basqariw orayi';
 $lang['menu_home'] = 'Бас бет';
 $lang['menu_about_us'] = 'Биз хаққымызда';
+$lang['menu_about_us2'] = 'Хакимият хаққында';
+$lang['menu_investicion'] = 'Инвестиция';
 $lang['menu_services'] = 'Сервислар';
 $lang['menu_help'] = 'Жәрдем';
 $lang['menu_news'] = 'Жаңалықлар';
@@ -34,13 +37,15 @@ $lang['see'] = 'Келиң хәм өзиңиз көриң';
 $lang['popular'] = 'Нөкистеги танықлы жерлер';
 $lang['getin'] = 'Биз бенен байланысыу';
 $lang['adress'] = '230105, Нөкис қаласы , A.Досназаров көшеси № 96';
-$lang['phone'] = ' 0 (361) 222-25-39';
+$lang['phone'] = ' 0 (361) 222-52-20';
 
 $lang['name'] = 'Атыңыз';
 $lang['email1'] = 'Электрон почта';
 $lang['news'] = 'Жаналыклар';
 
-
+$lang['send'] = 'Жибериу';
+$lang['subject'] = 'Тема';
+$lang['message'] = 'Хабар';
 
 
 
