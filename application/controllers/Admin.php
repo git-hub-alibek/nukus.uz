@@ -51,6 +51,10 @@ public function images(){
 
 	public function index()
 	{
+if(!$this->ion_auth->logged_in()){
+            redirect('auth/login');
+        }
+
 		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
 	}
 

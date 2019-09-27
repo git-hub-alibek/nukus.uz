@@ -349,7 +349,7 @@ section
 {
 	font-size: 24px;
 	font-weight: 500;
-	line-height: 0.5;
+	line-height: 0.75;
 }
 .logo div:nth-child(2)
 {
@@ -401,8 +401,8 @@ section
 {
 	display: inline-block;
 	position: relative;
-	padding-left: -20px;
-	
+	/*padding-left: 22px;
+	padding-right: 22px;*/
 	margin-right: -4px;
 	padding-top: 2px;
 }
@@ -466,7 +466,7 @@ section
 }
 .search.active
 {
-	
+	width: 300px;
 }
 .search:hover
 {
@@ -653,7 +653,7 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 1000ms 600ms ease;
 	opacity: 0;
-	margin-top: 3220px;
+	margin-top: 30px;
 }
 .menu_container.active .menu_list
 {
@@ -1623,8 +1623,4 @@ section
 .tag:hover
 {
 	background: rgba(254,60,82,0.8);
-}
-.ali {
-	background:rgba(0,0,0,0.7); 
-	box-shadow:0 2px 2px rgba(0,0,0,0.1);
 }
