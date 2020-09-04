@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rezume extends CI_Controller {
+class Resume extends CI_Controller {
 
 	function __construct()
 		{
@@ -13,7 +13,7 @@ class Rezume extends CI_Controller {
 		public function index()
 		{
 			$this->load->helper('text');
-		$data['rezume'] = $this->db->order_by('id', 'DESC')->get('rezume')->result(); 
+			$data['resume'] = $this->db->order_by('id', 'DESC')->get('resume')->result(); 
 			if ($this->input->post('send'))
 			{
 				$this->form_validation->set_rules('from','Ваше имя','required|trim');
@@ -62,20 +62,22 @@ class Rezume extends CI_Controller {
 				else
 				{
 					$data['title'] = 'Обратная связь';
-					$this->view_lib->render('rezume/rezume',$data);
+					$this->load->view('resume',$data);
 				}
 			}
 			else
 			{
 				$data['title'] = 'Обратная связь';
-				$this->view_lib->render('rezume/rezume',$data);
+				$this->load->view('resume',$data);
 			}
 		}
-		public function show($id)
+	
+	public function show($id)
 	{
-	$data['info']=$this->db->where('id',$id)->get('rezume')->row_array();
-	$this->view_lib->render_investicion('rezume/show',$data);	
+		$data['resume']=$this->db->where('id',$id)->get('resume')->row_array();
+		$this->view_lib->render_investicion('rezume/show',$data);	
 	}
+
 }
 		
 	

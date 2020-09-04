@@ -345,7 +345,7 @@
                                             </div>
                                         </div> <br>
                                         <div class="two_btn">
-                                            <a href='rezume' style="color: white;" class="btn btn-primary btn_print"><?php echo lang('arza_jiberiw');?></a>
+                                            <a href="/<?php echo $this->uri->segment(1); ?>/resume" style="color: white;" class="btn btn-primary btn_print"><?php echo lang('arza_jiberiw');?></a>
                                             
                                         </div> <br>
                                 </div>
