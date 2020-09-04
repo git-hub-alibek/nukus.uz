@@ -33,7 +33,7 @@ $lang['beautiful'] = 'Beautiful places in Nukus';
 $lang['see'] = 'COME TO US AND SEE FOR YOURSELF';
 $lang['popular'] = 'Popular places  in Nukus';
 $lang['getin'] = 'Get In Touch';
-$lang['adress'] = '230105, Nukus city , street A.Dosnazarov № 96';
+$lang['adress'] = '230103, Nukus city , street A.Dosnazarov № 96';
 $lang['phone'] = ' 0 (361) 222-52-20';
 
 $lang['name'] = 'Name';
@@ -45,6 +45,29 @@ $lang['subject'] = 'Subject';
 $lang['message'] = 'Message';
 
 
+$lang['adr'] = 'Adress:';
+$lang['ph'] = 'Phone:';
+$lang['mail'] = 'Email:';
+$lang['qabul'] = 'Reception days';
+$lang['paraxat'] = 'Tureshov 
+Paraxat Polatovich';
+$lang['qallibek'] = 'Khojanov Kallibek Kewnimjaevich ';
+$lang['polat'] = 'Kudiyarov Polatbek Azatovich';
+$lang['madiyar'] = 'Ernazarov Madiyar Turdimuratovich';
+$lang['erkinbay'] = 'Allanov Erkinbay Oralbaevich';
+$lang['gulsara'] = 'Abibullaeva Gulsara Gaybullaevna';
+$lang['5kun'] = 'Friday';
+$lang['1kun'] = 'Monday';
+$lang['2kun'] = 'Tuesday';
+$lang['3kun'] = 'Wednesday';
+$lang['4kun'] = 'Thursday';
+$lang['hak'] = 'Government of nukus city';
+$lang['hakim'] = 'Mayor of Nukus city';
+$lang['1zam'] = 'First Deputy Mayor on finance and economics issues of poverty reduction ';
+$lang['2zam'] = 'Deputy Mayor on industrial development, capital construction, communications and utilities  ';
+$lang['3zam'] = 'Deputy Mayor on investment, innovation, assistance to privatized enterprises and development of small industrial zones and tourism ';
+$lang['4zam'] = 'Deputy Mayor on youth policy, social development and spiritual issues';
+$lang['5zam'] = 'Deputy Mayor - head of department on supporting mahalla (neighborhood) and family ';
 
 
 

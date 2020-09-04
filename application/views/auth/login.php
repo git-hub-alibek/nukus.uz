@@ -1,5 +1,7 @@
-<div class="row justify-content-center">
-  <div class="col-12 col-md-4">
+<link rel="stylesheet" href="/assets/styles/bootstrap4/bootstrap.min.css">
+
+<div class="row justify-content-center" style="margin-top: 100px;">
+  <div class="col-12 col-md-4 ">
     <div id="infoMessage"><?php echo $message;?></div>
     <div class="card border-info mb-3">
       <div class="card-header"><h3><?php echo lang('login_heading');?></h3></div>

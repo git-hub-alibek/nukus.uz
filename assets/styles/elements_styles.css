@@ -316,11 +316,13 @@ section
 {
 	font-size: 48px;
 	font-weight: 100;
-	color: #FFFFFF;
+	color: rgb(247, 66, 66);
+	margin-top: -50px;
 }
 .home_breadcrumbs
 {
-	margin-top: -6px;
+	margin-top: -10px;
+	
 }
 .home_breadcrumbs_list
 {
@@ -331,13 +333,13 @@ section
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 200;
-	color: #FFFFFF;
+	color: rgb(247, 66, 66);
 }
 .home_breadcrumb a
 {
 	font-size: 18px;
 	font-weight: 200;
-	color: #FFFFFF;
+	color: rgb(247, 66, 66);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -346,7 +348,7 @@ section
 }
 .home_breadcrumb a:hover
 {
-	color: #fe3c52;
+	color: #16a329;
 }
 .home_breadcrumb:not(:last-child)::after
 {

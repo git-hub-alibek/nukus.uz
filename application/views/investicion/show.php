@@ -154,12 +154,12 @@
 		 <div class="row">
        <div class="col-lg-12 center"> <h2 ><?php echo $info['title_' . $lang = $this->lang->lang()];?></h2> </div>
 <div class="post_image">
-<div class="row"> <div class="col-lg-8">
+<div class="row"> <div class="col-lg-12">
 <?php
 echo "<img src='/uploads/".$info['img']."'  class='img-fluid img-thumbnail' width='700' />";
 ?>
 </div>
-<div class="col-lg-4">
+<div class="col-lg-12">
 <?php 
 echo "<div>".$info['text_' . $lang = $this->lang->lang()]."</div>";
 ?>

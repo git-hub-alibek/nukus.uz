@@ -55,15 +55,15 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-
+$route['^kk/(.+)$'] = "$1";
 $route['^en/(.+)$'] = "$1";
 $route['^ru/(.+)$'] = "$1";
 $route['^uz/(.+)$'] = "$1";
-$route['^kk/(.+)$'] = "$1";
+
 
 
 // '/en' and '/fr' -> use default controller
+$route['^kk$'] = $route['default_controller'];
 $route['^en$'] = $route['default_controller'];
 $route['^ru$'] = $route['default_controller'];
 $route['^uz$'] = $route['default_controller'];
-$route['^kk$'] = $route['default_controller'];

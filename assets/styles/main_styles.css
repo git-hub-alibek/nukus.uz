@@ -250,7 +250,7 @@ section
 .home_content
 {
 	position: absolute;
-	top: 46%;
+	top: 26%;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
@@ -262,10 +262,10 @@ section
 }
 .home_text_large
 {
-	font-size: 215px;
+	font-size: 210px;
 	font-weight: 900;
 	color: #fdaa27;
-	opacity: 0.34;
+	opacity: 0.54;
 	text-transform: uppercase;
 	line-height: 0.75;
 }
@@ -424,8 +424,8 @@ section
 	font-weight: 400;
 	color: #FFFFFF;
 	line-height: 40px;
-	padding-left: 12px;
-	padding-right: 22px;
+	padding-left: 10px;
+	padding-right: 10px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;

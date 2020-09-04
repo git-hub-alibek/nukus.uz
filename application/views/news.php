@@ -38,6 +38,7 @@
 							<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('investicion');?>"><?php echo lang('menu_investicion');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('vacancy');?>"><?php echo lang('menu_vacancy');?></a></li>
 								<li class="main_nav_item active"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								<div class="dropdown main_nav_item">
@@ -130,7 +131,7 @@
 
 	<div class="home">
 		<!-- Image by https://unsplash.com/@peecho -->
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/assets/images/news.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/assets/images/home.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -152,17 +153,13 @@
 
 	<!-- Find Form -->
 
-	<div class="find">
-		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="find_background_container prlx_parent">
-			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
-		</div>
+	
 		
-<!-- News -->
 
-<div class="news">
-		<div class="container">
-			<div class="row">
+	<!-- News Post -->
+				<br>	
+		<div class="container ">
+			<div class="row pt-5">
 
 				<!-- News Posts -->
 				<div class="col-lg-9">
@@ -170,17 +167,7 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-						<div class="news">
-		<div class="container">
-			<div class="row">
-
-				<!-- News Posts -->
-				<div class="col-lg-10">
-					<div class="news_posts">
-						
-						<!-- News Post -->
-						<div class="news_post">
-							<div class="post_title"><a href="#"><?php echo lang('news');?></a></div>
+							<div class="post_title "><h2 align='center'><?php echo lang('news');?></h2></div>
 							<div class="post_meta">
 								
 							</div>
@@ -217,11 +204,9 @@
 						
     
 				<!-- Sidebar -->
-				<div class="col-lg-2">
+				<div class="col-lg-3">
 					<div class="sidebar">
-						
-
-						<!-- Featured Posts -->
+					<!-- Featured Posts -->
 						<div class="sidebar_featured">
 						
 							<!-- Featured Post -->
@@ -230,46 +215,18 @@
 	$this->load->view('news_old');
 	?>
 							</div>
-
+				<br>
+				<br>
+				<br>
 							
 
 							
 
 						</div>
-	<!-- News -->
-	
-	
-    
-    </div>
-	
-
-
-	
-				
-				
-				
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="newsletter_background" style="background-image:url(images/newsletter.jpg)"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<div class="newsletter_content">
-						
-							</form>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+						</div>
 
-	<?php $this->load->view('footer');?>
-</div>
-
+<?php $this->load->view('footer.php');?> </div>
 <script src="/assets/js/jquery-3.2.1.min.js"></script>
 <script src="/assets/styles/bootstrap4/popper.js"></script>
 <script src="/assets/styles/bootstrap4/bootstrap.min.js"></script>

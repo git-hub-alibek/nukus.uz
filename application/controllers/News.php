@@ -11,7 +11,7 @@ class News extends CI_Controller {
 		
 		
 		
-		$data['news'] = $this->db->limit(4)->order_by('id', 'DESC')->get('news')->result(); 
+		$data['news'] = $this->db->limit(5)->order_by('id', 'DESC')->get('news')->result(); 
 		$data['news_old'] = $this->db->limit(4,5)->order_by('id', 'DESC')->get('news')->result();
 		$this->load->view('/news', $data);   		
 		

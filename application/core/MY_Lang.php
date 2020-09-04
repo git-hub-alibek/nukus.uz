@@ -12,10 +12,11 @@ class MY_Lang extends CI_Lang {
 
 	// languages
 	var $languages = array(
+		'kk' => 'karakalpak',		
 		'en' => 'english',
 		'ru' => 'russian',		
 		'uz' => 'uzbek',
-		'kk' => 'karakalpak',
+		
 		
 	);
 	

@@ -7,7 +7,16 @@ class View_lib{
         
     }
     
-    
+    function render($page,$data = '')
+    {
+        $CI =&get_instance();
+        //$CI->output->enable_profiler(TRUE);
+        $data = (array)$data;
+        if (!isset($data['title'])) $data['title'] = $CI->config->item('default_title');
+        $data['content'] = $page;
+        $data['data'] = $data;
+        $CI->load->view('rezume',$data);
+    }
     function render_investicion($page,$data = '')
     {
 		$CI =&get_instance();

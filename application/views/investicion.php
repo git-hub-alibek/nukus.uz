@@ -38,6 +38,7 @@
 							<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item "><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
 								<li class="main_nav_item active"><a href="<?php echo site_url('investicion');?>"><?php echo lang('menu_investicion');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('vacancy');?>"><?php echo lang('menu_vacancy');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								
@@ -161,12 +162,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row about_row">
-				<div class="col-lg-6 about_col order-lg-1 order-2">
-					
-				</div>
-				
-			</div>
+			
 		</div>
 	</div>
 	<div class="news">
@@ -213,45 +209,19 @@
 						</div>
 						<?php endforeach;?>
 						
-						
+						</div>
+				</div></div>
+				</div></div>
+				</div></div>
+				</div></div>
+				
 					
 
 					</div>
 				</div>
 	
 
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-
-				<!-- Footer Column -->
-				<div class="col-lg-12 footer_col">
-					<div class="footer_about">
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo"> 
-							<div>&nbsp;&nbsp;&nbsp;<?php echo lang('nukus');?></div>
-								<!-- <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo lang('uzbekistan');?></div> -->
-								
-								<div class="logo_image"><img src="/assets/images/logo.png" alt=""></div> 
-							</div>
-						</div>
-						<div class="footer_about_text"></div>
-						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- &copy;<script>document.write(new Date().getFullYear());</script> <?php echo lang('prava');?> <a href="http://alibek.uz" target="_blank">Web Developer</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					</div>
-				</div>
-
-				
-							
-
-
-				
-		</div>
-	</footer>
+	<?php $this->load->view('footer');?>
 </div>
 
 <script src="/assets/js/jquery-3.2.1.min.js"></script>

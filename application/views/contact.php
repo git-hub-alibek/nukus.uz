@@ -38,6 +38,7 @@
 								<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('investicion');?>"><?php echo lang('menu_investicion');?></a></li>
+								<li class="main_nav_item"><a href="<?php echo site_url('vacancy');?>"><?php echo lang('menu_vacancy');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item active"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								
@@ -196,11 +197,17 @@
 				<div class="col-lg-7">
 					<div class="contact_form_container">
 						<form action="#" id="contact_form" class="clearfix">
-							<input id="contact_input_name" class="contact_input contact_input_name" type="text" placeholder="<?php echo lang('name');?>" required="required" data-error="Name is required.">
-							<input id="contact_input_email" class="contact_input contact_input_email" type="text" placeholder="<?php echo lang('email1');?>" required="required" data-error="E-mail is required.">
-							<input id="contact_input_subject" class="contact_input contact_input_subject" type="text" placeholder="<?php echo lang('subject');?>">
-							<textarea id="contact_input_message" class="contact_message_input contact_input_message" name="message" placeholder="<?php echo lang('message');?>" required="required" data-error="Please, write us a message."></textarea>
-							<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit"><?php echo lang('send');?></button>
+							<input name="from" id="from" class="contact_input contact_input_name" type="text" placeholder="<?php echo lang('name');?>" required="required" data-error="Name is required.">
+							<input name="email" id="email" class="contact_input contact_input_email" type="text" placeholder="<?php echo lang('email1');?>" required="required" data-error="E-mail is required.">
+							<input name="title" id="title" class="contact_input contact_input_subject" type="text" placeholder="<?php echo lang('subject');?>">
+							<textarea name="text" id="text" class="contact_message_input contact_input_message" name="message" placeholder="<?php echo lang('message');?>" required="required" data-error="Please, write us a message."></textarea>
+							<div class="form-group">
+		<label for="captcha" ><?php echo lang('feedback_protection'); ?></label>
+		<img src="/captcha/?<?php echo time();?>" /><br />
+		<input type="text" name="captcha" id="captcha" class="form-control" placeholder="<?php echo lang('feedback_placeholder_protection'); ?>" />
+	</div>
+							<input type="submit" name="send" class="contact_send_btn trans_200" value="<?php echo lang('send');?>" />
+							
 						</form>
 					</div>
 				</div>
