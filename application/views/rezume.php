@@ -166,7 +166,7 @@
 			
 			<div class="col-lg-12">
 					<div class="contact_form_container">
-						<form action="Rezume" id="contact_form" class="clearfix">
+						<form action="rezume" id="contact_form" class="clearfix">
 							<input name="from" id="from" class="contact_input contact_input_name" type="text" placeholder="<?php echo lang('name');?>" required="required" data-error="Name is required.">
 							<input name="email" id="email" class="contact_input contact_input_email" type="text" placeholder="<?php echo lang('email1');?>   *(Не обязательно) " required="required" data-error="E-mail is required.">
 							<input name="phone" id="phone" class="contact_input contact_input_subject" type="text" placeholder="<?php echo lang('tel');?>">

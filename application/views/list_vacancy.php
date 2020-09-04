@@ -202,46 +202,24 @@
 	<div class="news">
 		<div class="container pt-5">
 		
-		
-						<!-- News Post -->
-						<div class="news_post card card-body">
-						<div class="section_title text-center" >
-						<h2><?php echo lang('menu_vacancy');?></h2>
-						</div>
-							<?php foreach($vacancy as $v):?>
-								<div class="row">
-									<div class="col-md-6 col-6">
-								<div id="candidates_count" class="count_vacant">
-                              <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
-                              <p><?php echo lang('nomzodlar');?></p>
-                            </div>
-							</div>
-							<div class="col-md-6 col-6">
-								<div id="candidates_count" class="count_vacant">
-                              <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
-                              <p><?php echo lang('nomzodlar');?></p>
-                            </div>
-							</div><div class="col-md-6 col-6">
-								<div id="candidates_count" class="count_vacant">
-                              <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
-                              <p><?php echo lang('nomzodlar');?></p>
-                            </div>
-							</div>
-							<div class="col-md-6 col-6">
-							<div id="left_days" class="count_vacant">
-                              <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
-                              <p><?php echo lang('qolgan_vaqt');?></p>
-                            </div>
-							</div>
-							</div>
-
-							
-							</div>
-							
-						</div>
-						<?php endforeach;?>
-						
-						<br>
+			<!-- News Post -->
+			<div class="news_post card card-body">
+				<div class="section_title text-center" >
+					<h2><?php echo lang('menu_vacancy');?></h2>
+				</div>
+				<div class="row">
+				<?php foreach($vacancy as $v):?>
+					<div class="col-md-6 col-6">
+						<div id="candidates_count" class="count_vacant">
+				            <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+				            <p><a href="/<?php echo $this->uri->segment(1); ?>/vacancy/show/<?php echo $v->id; ?>"><?php echo $v->position; ?></a></p>
+				        </div>
+					</div>
+				<?php endforeach;?>
+				</div>
+			</div>
+				
+		</div><br>
 					
 
 	
