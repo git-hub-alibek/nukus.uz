@@ -360,10 +360,7 @@
 						<?php endforeach;?>
 						
 						<br>
-					
-
-	
-
+				
 	<!-- Footer -->
 
 	<footer class="footer">
