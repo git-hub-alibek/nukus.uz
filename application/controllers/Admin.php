@@ -4,25 +4,15 @@
 
 class Admin extends CI_Controller {
 
-
-
-
-
-
-
-
-
 	public function __construct()
 
 	{
 
 		parent::__construct();
 
-//if(!$this->ion_auth->logged_in()){
-
-//			redirect('auth/login');
-
-//		}
+		if(!$this->ion_auth->logged_in()) {
+			redirect('auth/login');
+		}
 
 		$this->load->database();
 
@@ -77,45 +67,51 @@ public function investicion(){
 		$this->_example_output($output);
 
 	}
-	public function vacancy(){
-
+	public function vacancy()
+	{
 		$crud=new grocery_CRUD();
-
-		
-
+		$crud->columns('id','position','organ','salary','extra_fee','structure','wage_rate','region','deadline','edu_level','obligation','working_days');
+		$crud->display_as('id','#');
+		$crud->display_as('position','Lawazım');
+		$crud->display_as('organ','Mákeme');
+		$crud->display_as('salary','Is haqı');
+		$crud->display_as('extra_fee','Qosımsha haq');
+		$crud->display_as('structure','Dúzilis');
+		$crud->display_as('wage_rate','Jumıs dárejesi');
+		$crud->display_as('region','Aymaq');
+		$crud->display_as('deadline','Múddet');
+		$crud->display_as('edu_level','Tálim dárejesi');
+		$crud->display_as('obligation','Talaplar');
+		$crud->display_as('working_days','Jumıs kúnleri');
 		$output=$crud->render();
-
 		$this->_example_output($output);
-
 	}
-	public function rezume(){
+	public function resume(){
 
 		$crud=new grocery_CRUD();
-
+		$crud->columns('id','vacancy_id','full_name','email','phone','reference','diploma','work_record','passport','img');
+		$crud->display_as('id','#');
+		$crud->display_as('vacancy_id','Vakansiya');
+		$crud->display_as('full_name','A.F.Áa.');
+		$crud->display_as('email','Email');
+		$crud->display_as('phone','Telefon');
+		$crud->display_as('reference','Maǵlıwmatnama');
+		$crud->display_as('diploma','Diplom');
+		$crud->display_as('work_record','Jumıs dáptershesi');
+		$crud->display_as('passport','Passport');
+		$crud->display_as('img','Súwret');
+		$crud->set_relation('vacancy_id','vacancy','position');
 		$crud->set_field_upload('img','uploads');
-
 		$output=$crud->render();
-
 		$this->_example_output($output);
-
 	}
-public function images(){
-
+	
+	public function images(){
 		$crud=new grocery_CRUD();
-
 		$crud->set_field_upload('img','uploads');
-
 		$output=$crud->render();
-
 		$this->_example_output($output);
-
-
-
 	}
-
-
-
-
 
 	public function _example_output($output = null)
 

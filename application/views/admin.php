@@ -21,7 +21,7 @@ foreach($css_files as $file): ?>
 				<a style="font-size: 25px" class="btn btn-primary" href='<?php echo site_url('admin/news');?>'><i class="glyphicon glyphicon-wrench">  </i> Жаналық қосыу</a> |
 				<a style="font-size: 25px" class="btn btn-primary" href='<?php echo site_url('admin/investicion');?>'><i class="glyphicon glyphicon-list-alt">  </i> Инвестиция қосыу</a> |
 				<a style="font-size: 25px" class="btn btn-primary" href='<?php echo site_url('admin/vacancy');?>'><i class="glyphicon glyphicon-list-alt">  </i> Вакансия қосыу</a> |
-				<a style="font-size: 25px" class="btn btn-primary" href='<?php echo site_url('admin/rezume');?>'><i class="glyphicon glyphicon-list-alt">  </i> Резюме</a> |
+				<a style="font-size: 25px" class="btn btn-primary" href='<?php echo site_url('admin/resume');?>'><i class="glyphicon glyphicon-list-alt">  </i> Резюме</a> |
 				
 				<a style="font-size: 25px" class="btn btn-primary" href='<?php echo site_url('auth/index');?>'><i class="glyphicon glyphicon-user"></i> Пайданыўшылар </a> | 
 				<a style="font-size: 25px" class="btn btn-danger" href='<?php echo site_url('auth/logout');?>'><i class="glyphicon glyphicon-log-out"> </i> Шығыў</a> 
