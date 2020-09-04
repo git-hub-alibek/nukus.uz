@@ -39,7 +39,7 @@
 							<ul class="main_nav_list">
 							<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item "><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
-								<li class="main_nav_item active"><a href="<?php echo site_url('rezume');?>"><?php echo lang('rezume');?></a></li>
+								<li class="main_nav_item active"><a href="/<?php echo $this->uri->segment(1) ;?>/resume"><?php echo lang('rezume');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								

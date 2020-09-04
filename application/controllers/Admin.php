@@ -92,7 +92,7 @@ public function investicion(){
 		$crud->columns('id','vacancy_id','full_name','email','phone','reference','diploma','work_record','passport','img');
 		$crud->display_as('id','#');
 		$crud->display_as('vacancy_id','Vakansiya');
-		$crud->display_as('full_name','A.F.Áa.');
+		$crud->display_as('full_name','F.A.Áa.');
 		$crud->display_as('email','Email');
 		$crud->display_as('phone','Telefon');
 		$crud->display_as('reference','Maǵlıwmatnama');
