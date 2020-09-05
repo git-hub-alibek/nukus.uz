@@ -237,7 +237,11 @@
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-user-circle-o" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('lavozim');?></span>
+
                                                         <span"><?php echo word_limiter($vacancy[0]->position, 100);?>
+
+                                                        <span"><?php echo word_limiter($v->position, 100);?>
+
                                                         </span>
                                                     </td>
                                                     <td>
@@ -245,7 +249,11 @@
                                                         <span><?php echo lang('ish_haqqi');?></span>
                                                         <span">
                                                           
+
 														<?php echo word_limiter($vacancy[0]->salary, 50);?>
+
+														<?php echo word_limiter($v->salary, 50);?>
+
                                                           
                                                         </span>
                                                     </td>
@@ -254,14 +262,22 @@
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-building" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('tashkilot');?></span>
+
                                                         <span"><?php echo word_limiter($vacancy[0]->organ, 50);?></span>
+
+                                                        <span"><?php echo word_limiter($v->organ, 50);?></span>
+
                                                     </td>
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-money" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('qoshimcha');?></span>
                                                         <span">
                                                           
+
 														<?php echo word_limiter($vacancy[0]->extra_fee, 50);?>
+
+														<?php echo word_limiter($v->extra_fee, 50);?>
+
                                                           
                                                         </span>
                                                     </td>
@@ -270,14 +286,22 @@
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-calculator" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('tuzilma');?></span>
+
                                                         <span"><?php echo word_limiter($vacancy[0]->structure, 50);?></span>
+
+                                                        <span"><?php echo word_limiter($v->structure, 50);?></span>
+
                                                     </td>
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-clock-o" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('stavka');?></span>
                                                         <span">
                                                           
+
 														<?php echo word_limiter($vacancy[0]->wage_rate, 50);?>
+
+														<?php echo word_limiter($v->wage_rate, 50);?>
+
                                                           
                                                         </span>
                                                     </td>
@@ -288,7 +312,11 @@
                                                         <span><?php echo lang('tuman');?></span>
                                                         <span">
                                                           
+
 														<?php echo word_limiter($vacancy[0]->region, 50);?>
+
+														<?php echo word_limiter($v->region, 50);?>
+
                                                         </span>
                                                     </td>
                                                     <td>
@@ -314,7 +342,11 @@
                                                     </div>
                                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="">
                                                         <div class="card-body">
+
 														<?php echo lang('talim_darajasi');?> <?php echo $vacancy[0]->edu_level;?>
+
+														<?php echo lang('talim_darajasi');?> <?php echo $v->edu_level;?>
+
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -327,7 +359,11 @@
                                                     </div>
                                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="">
                                                         <div class="card-body">
+
 														<?php echo $vacancy[0]->obligation;?>
+
+														<?php echo $v->obligation;?>
+
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -340,7 +376,11 @@
                                                     </div>
                                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="">
                                                         <div class="card-body">
+
 														<?php echo lang('ish_kunlari');?> <?php echo $vacancy[0]->working_days;?>
+
+														<?php echo lang('ish_kunlari');?> <?php echo $v->working_days;?>
+
                                                         </div>
                                                     </div>
                                                 </div>
