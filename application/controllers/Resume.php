@@ -8,6 +8,8 @@ class Resume extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->helper('form');
+		// load base_url
+    	// $this->load->helper('url');
 	}
 
 	public function index()
@@ -34,29 +36,53 @@ class Resume extends CI_Controller {
 		// $diploma = $this->input->post('diplom');
 		// $work_record = $this->input->post('trudovoy');
 		// $passport = $this->input->post('passport');	
+		// move_uploaded_file($reference, '/uploads');
+		// move_uploaded_file($diploma, '/uploads');
+		// move_uploaded_file($work_record, '/uploads');
+		// move_uploaded_file($passport, '/uploads');
+        $config = [
+            'upload_path' => './uploads/',
+            'allowed_types' => 'gif|jpg|png|pdf'
+        ];
 
-		$insert = [
-			'vacancy_id' => $this->input->post('vacancy_id'),
-			'full_name' => $this->input->post('from'),
-			'email' => $this->input->post('email'),
-			'phone' => $this->input->post('phone'),
-			'reference' => $this->input->post('obiektiva'),
-			'diploma' => $this->input->post('diplom'),
-			'work_record' => $this->input->post('trudovoy'),
-			'passport' => $this->input->post('passport')
-		];
-		var_dump($insert);
-		$this->db->insert('resume', $insert);
-		$count_res = intval($vacancy[0]->count_res)+1;
-		$this->db->where('id',intval($vacancy[0]->id))->update('vacancy', ['count_res' => $count_res] );
+        $this->load->library('upload', $config);
 
-		$token = "1365514468:AAGUMD4AfUcsNaLc_7u-rHFV14H_mRjqYtA";
-		$chat_id = "-1001199553849";
-		$txt = urlencode("*Резюме:* \n`Lawazım: `*".$vacancy[0]->position."*\n`Atı: `*".$full_name."*\n`Email: `*".$email."*\n`Тел. номери: `*".$phone."*");
-			
-		$text = "";
 
-		$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&text={$txt}&parse_mode=markdown","r");				
+            if ( !$this->upload->do_upload('obiektiva') || !$this->upload->do_upload('diplom') || !$this->upload->do_upload('trudovoy') || !$this->upload->do_upload('passport')) {
+                $this->data['error'] = array('error' => $this->upload->display_errors() );
+                var_dump($this->data);
+            } 
+            else {
+                $this->data['data'] = $this->upload->data();
+
+				$insert = [
+					'vacancy_id' => $this->input->post('vacancy_id'),
+					'full_name' => $this->input->post('from'),
+					'email' => $this->input->post('email'),
+					'phone' => $this->input->post('phone'),
+					'reference' => $_FILES["obiektiva"]['name'],
+					'diploma' => $_FILES['diplom']['name'],
+					'work_record' => $_FILES['trudovoy']['name'],
+					'passport' => $_FILES['passport']['name']
+				];
+				// var_dump($insert);
+				$this->db->insert('resume', $insert);
+				$count_res = intval($vacancy[0]->count_res)+1;
+				$this->db->where('id',intval($vacancy[0]->id))->update('vacancy', ['count_res' => $count_res] );
+
+				/// sending Message to the Telegram
+				$token = "1365514468:AAGUMD4AfUcsNaLc_7u-rHFV14H_mRjqYtA";
+				$chat_id = "-1001199553849";
+				$txt = urlencode("*Резюме:* \n`Lawazım: `*".$vacancy[0]->position."*\n`Atı: `*".$full_name."*\n`Email: `*".$email."*\n`Тел. номери: `*".$phone."*");
+					
+				$text = "";
+
+				$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&text={$txt}&parse_mode=markdown","r");
+				echo "<script>alert('Send successfully!');</script>";
+                
+                $this->load->view('homepage');
+            }
+				
 	}
 
 	public function zapas()
@@ -104,7 +130,7 @@ class Resume extends CI_Controller {
 				$this->email->send();
 				
 				$this->session->set_flashdata('message','<div class="alert alert-success">Сообщение успешно отправлено!</div>');
-				redirect('rezume','location');
+				redirect('resume','location');
 			}
 			else
 			{

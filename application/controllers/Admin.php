@@ -56,7 +56,8 @@ class Admin extends CI_Controller {
 
 	}
 
-public function investicion(){
+	public function investicion()
+	{
 
 		$crud=new grocery_CRUD();
 
@@ -98,16 +99,24 @@ public function investicion(){
 		$crud->display_as('email','Email');
 		$crud->display_as('phone','Telefon');
 		$crud->display_as('reference','Maǵlıwmatnama');
+		$crud->callback_column('reference', array($this, 'add_link_ref'));
 		$crud->display_as('diploma','Diplom');
 		$crud->display_as('work_record','Jumıs dáptershesi');
 		$crud->display_as('passport','Passport');
 		$crud->set_relation('vacancy_id','vacancy','position');
-		$crud->set_field_upload('img','uploads');
+		$crud->set_field_upload('reference','uploads');
+		$crud->set_field_upload('diploma','uploads');
+		$crud->set_field_upload('work_record','uploads');
+		$crud->set_field_upload('passport','uploads');
 		$crud->order_by('id', 'desc');
 		$output=$crud->render();
 		$this->_example_output($output);
 	}
-	
+	public function add_link_ref($value)
+	{
+		return "<a target='_blank' href='/uploads/".$value."'>$value</a>";
+	}
+
 	public function images(){
 		$crud=new grocery_CRUD();
 		$crud->set_field_upload('img','uploads');
