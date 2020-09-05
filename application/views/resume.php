@@ -39,7 +39,7 @@
 							<ul class="main_nav_list">
 							<li class="main_nav_item "><a href="<?php echo site_url('/');?>"><?php echo lang('menu_home');?></a></li>
 								<li class="main_nav_item "><a href="<?php echo site_url('about');?>"><?php echo lang('menu_about_us');?></a></li>
-								<li class="main_nav_item active"><a href="/<?php echo $this->uri->segment(1) ;?>/resume"><?php echo lang('rezume');?></a></li>
+								<!-- <li class="main_nav_item active"><a href="/<?php echo $this->uri->segment(1) ;?>/resume"><?php echo lang('rezume');?></a></li> -->
 								<li class="main_nav_item"><a href="<?php echo site_url('news');?>"><?php echo lang('menu_news');?></a></li>
 								<li class="main_nav_item"><a href="<?php echo site_url('contact');?>"><?php echo lang('menu_contact');?></a></li>
 								
@@ -159,6 +159,7 @@
 				<div class="col">
 					<div class="section_title text-center">
 						<h2><?php echo lang('rezume');?></h2>
+						<p><?php echo isset($vacancy) ? $vacancy[0]->position : ''; ?></p>
 						<div></div>
 					</div>
 				</div>
@@ -166,35 +167,37 @@
 			
 			<div class="col-lg-12">
 					<div class="contact_form_container">
-						<form action="rezume" id="contact_form" class="clearfix">
+						<form action="/<?php echo $this->uri->segment(1).'/resume/send' ; ?>" id="contact_form" class="clearfix" method="post">
 							<input name="from" id="from" class="contact_input contact_input_name" type="text" placeholder="<?php echo lang('name');?>" required="required" data-error="Name is required.">
 							<input name="email" id="email" class="contact_input contact_input_email" type="text" placeholder="<?php echo lang('email1');?>   *(Не обязательно) " required="required" data-error="E-mail is required.">
 							<input name="phone" id="phone" class="contact_input contact_input_subject" type="text" placeholder="<?php echo lang('tel');?>">
 							<div class="form-group row">
-                  <label for="input-8" name='obiektiva' id='obektivka' class="col-sm-2 col-form-label">Обьективка <span style='color:blue;'>(doc,docx)</span></label>
+                  <label for="input-8" name='' id='obektivka' class="col-sm-2 col-form-label">Обьективка <span style='color:blue;'>(doc,docx)</span></label>
                   <div class="col-sm-10">
-                    <input type="file" class="form-control" id="input-8" name="image" required="">
+                    <input type="file" class="form-control" id="input-8" name="obiektiva" required="">
                   </div>
 				</div>
 				<div class="form-group row">
-                  <label for="input-8" name="trudovoy" id='trudovoy' class="col-sm-2 col-form-label">Трудовой книжка <span style='color:blue;'>(pdf,jpg,jpeg,png)</span></label>
+                  <label for="input-8" name="" id='trudovoy' class="col-sm-2 col-form-label">Трудовой книжка <span style='color:blue;'>(pdf,jpg,jpeg,png)</span></label>
                   <div class="col-sm-10">
-                    <input type="file" class="form-control" id="input-8" name="image" required="">
+                    <input type="file" class="form-control" id="input-8" name="trudovoy" required="">
                   </div>
 				</div>
 				<div class="form-group row">
-                  <label for="input-8" name="diplom" id="diplom" class="col-sm-2 col-form-label">Диплом копия <span style='color:blue;'>(pdf,jpg,jpeg,png)</span></label>
+                  <label for="input-8" name="" id="diplom" class="col-sm-2 col-form-label">Диплом копия <span style='color:blue;'>(pdf,jpg,jpeg,png)</span></label>
                   <div class="col-sm-10">
-                    <input type="file" class="form-control" id="input-8" name="image" required="">
+                    <input type="file" class="form-control" id="input-8" name="diplom" required="">
                   </div>
 				</div>
 				<div class="form-group row">
-                  <label for="input-8" name="passport" id="passport" class="col-sm-2 col-form-label">Паспорт копия <span style='color:blue;'>(pdf,jpg,jpeg,png)</span></label>
+                  <label for="input-8" name="" id="passport" class="col-sm-2 col-form-label">Паспорт копия <span style='color:blue;'>(pdf,jpg,jpeg,png)</span></label>
                   <div class="col-sm-10">
-                    <input type="file" class="form-control" id="input-8" name="image" required="">
+                    <input type="file" class="form-control" id="input-8" name="passport" required="">
+                    <input type="hidden" name="vacancy_id" value="<?php echo $this->uri->segment(4); ?>">
                   </div>
                 </div>
 							<input type="submit" name="Rezume" class="contact_send_btn trans_200" value="<?php echo lang('send');?>" />
+
 							
 						</form>
 					</div>

@@ -206,19 +206,21 @@
 						<!-- News Post -->
 						<div class="news_post card card-body">
 						<div class="section_title text-center" >
-						<h2><?php echo lang('menu_vacancy');?></h2>
+							<h2><?php echo lang('menu_vacancy');?></h2>
 						</div>
-							<?php foreach($vacancy as $v):?>
 								<div class="row">
 									<div class="col-md-6 col-6">
 								<div id="candidates_count" class="count_vacant">
-                              <span>3</span>
+                              <span><?php echo $vacancy[0]->count_res; ?></span>
                               <p><?php echo lang('nomzodlar');?></p>
                             </div>
 							</div>
 							<div class="col-md-6 col-6">
 							<div id="left_days" class="count_vacant">
-                              <span>13</span>
+                              <span>
+                              	<?php $deadline = strtotime($vacancy[0]->deadline); ?>
+                              	<?php echo date('d', $deadline-time()); ?>
+                              </span>
                               <p><?php echo lang('qolgan_vaqt');?></p>
                             </div>
 							</div>
@@ -235,7 +237,7 @@
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-user-circle-o" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('lavozim');?></span>
-                                                        <span"><?php echo word_limiter($v->position, 100);?>
+                                                        <span"><?php echo word_limiter($vacancy[0]->position, 100);?>
                                                         </span>
                                                     </td>
                                                     <td>
@@ -243,7 +245,7 @@
                                                         <span><?php echo lang('ish_haqqi');?></span>
                                                         <span">
                                                           
-														<?php echo word_limiter($v->salary, 50);?>
+														<?php echo word_limiter($vacancy[0]->salary, 50);?>
                                                           
                                                         </span>
                                                     </td>
@@ -252,14 +254,14 @@
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-building" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('tashkilot');?></span>
-                                                        <span"><?php echo word_limiter($v->organ, 50);?></span>
+                                                        <span"><?php echo word_limiter($vacancy[0]->organ, 50);?></span>
                                                     </td>
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-money" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('qoshimcha');?></span>
                                                         <span">
                                                           
-														<?php echo word_limiter($v->extra_fee, 50);?>
+														<?php echo word_limiter($vacancy[0]->extra_fee, 50);?>
                                                           
                                                         </span>
                                                     </td>
@@ -268,14 +270,14 @@
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-calculator" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('tuzilma');?></span>
-                                                        <span"><?php echo word_limiter($v->structure, 50);?></span>
+                                                        <span"><?php echo word_limiter($vacancy[0]->structure, 50);?></span>
                                                     </td>
                                                     <td>
                                                         <span ><i class="fa fa-2x fa-clock-o" aria-hidden="true"></i></span>
                                                         <span><?php echo lang('stavka');?></span>
                                                         <span">
                                                           
-														<?php echo word_limiter($v->wage_rate, 50);?>
+														<?php echo word_limiter($vacancy[0]->wage_rate, 50);?>
                                                           
                                                         </span>
                                                     </td>
@@ -286,7 +288,7 @@
                                                         <span><?php echo lang('tuman');?></span>
                                                         <span">
                                                           
-														<?php echo word_limiter($v->region, 50);?>
+														<?php echo word_limiter($vacancy[0]->region, 50);?>
                                                         </span>
                                                     </td>
                                                     <td>
@@ -294,7 +296,7 @@
                                                         <span><?php echo lang('deadline');?></span>
                                                         <span">
                                                           
-														<?php echo word_limiter($v->deadline, 50);?>
+														<?php echo word_limiter($vacancy[0]->deadline, 50);?>
                                                           
                                                         </span>
                                                     </td>
@@ -312,7 +314,7 @@
                                                     </div>
                                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="">
                                                         <div class="card-body">
-														<?php echo lang('talim_darajasi');?> <?php echo $v->edu_level;?>
+														<?php echo lang('talim_darajasi');?> <?php echo $vacancy[0]->edu_level;?>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -325,7 +327,7 @@
                                                     </div>
                                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="">
                                                         <div class="card-body">
-														<?php echo $v->obligation;?>
+														<?php echo $vacancy[0]->obligation;?>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -338,14 +340,14 @@
                                                     </div>
                                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="">
                                                         <div class="card-body">
-														<?php echo lang('ish_kunlari');?> <?php echo $v->working_days;?>
+														<?php echo lang('ish_kunlari');?> <?php echo $vacancy[0]->working_days;?>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div> <br>
                                         <div class="two_btn">
-                                            <a href="/<?php echo $this->uri->segment(1); ?>/resume" style="color: white;" class="btn btn-primary btn_print"><?php echo lang('arza_jiberiw');?></a>
+                                            <a href="/<?php echo $this->uri->segment(1).'/resume/show/'.$this->uri->segment(4); ?>" style="color: white;" class="btn btn-primary btn_print"><?php echo lang('arza_jiberiw');?></a>
                                             
                                         </div> <br>
                                 </div>
@@ -356,10 +358,7 @@
 							</div>
 							</div>
 							
-						</div>
-						<?php endforeach;?>
-						
-						<br>
+						</div><br>
 				
 	<!-- Footer -->
 

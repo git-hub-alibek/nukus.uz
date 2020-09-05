@@ -70,8 +70,9 @@ public function investicion(){
 	public function vacancy()
 	{
 		$crud=new grocery_CRUD();
-		$crud->columns('id','position','organ','salary','extra_fee','structure','wage_rate','region','deadline','edu_level','obligation','working_days');
+		$crud->columns('id','count_res','position','organ','salary','extra_fee','structure','wage_rate','region','deadline','edu_level','obligation','working_days');
 		$crud->display_as('id','#');
+		$crud->display_as('count_res','Arzalar sanı');
 		$crud->display_as('position','Lawazım');
 		$crud->display_as('organ','Mákeme');
 		$crud->display_as('salary','Is haqı');
@@ -86,10 +87,11 @@ public function investicion(){
 		$output=$crud->render();
 		$this->_example_output($output);
 	}
-	public function resume(){
 
+	public function resume()
+	{
 		$crud=new grocery_CRUD();
-		$crud->columns('id','vacancy_id','full_name','email','phone','reference','diploma','work_record','passport','img');
+		$crud->columns('id','vacancy_id','full_name','email','phone','reference','diploma','work_record','passport');
 		$crud->display_as('id','#');
 		$crud->display_as('vacancy_id','Vakansiya');
 		$crud->display_as('full_name','F.A.Áa.');
@@ -99,9 +101,9 @@ public function investicion(){
 		$crud->display_as('diploma','Diplom');
 		$crud->display_as('work_record','Jumıs dáptershesi');
 		$crud->display_as('passport','Passport');
-		$crud->display_as('img','Súwret');
 		$crud->set_relation('vacancy_id','vacancy','position');
 		$crud->set_field_upload('img','uploads');
+		$crud->order_by('id', 'desc');
 		$output=$crud->render();
 		$this->_example_output($output);
 	}
